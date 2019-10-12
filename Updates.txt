@@ -1,1 +1,13 @@
-October 3rd: Did quality assesment on both scratch drive and personal directory. Also transfered files from Colossus onto desktop to continue foreward. 
+October 3rd: Did quality assesment on both scratch drive and personal directory. Also transfered files from Colossus onto desktop to continue foreward. R1 quality assesment was good however R2 was of much less quality. 
+
+Code used: fastqc GAB_R1.fastq.gz and *fastqc GAB_R2.fastq.gz*
+
+
+October 12th: Used cutadapt to get rid of primers on both R1 and R2. Following this ran spades and quast to make the assembly. R1 was trimmed 26522 times while R2 was trimmed 29816 times. After running spades it was completed with an errror correction and assembly warning. 
+
+Code used: cutadapt -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -m 50 --max-n 0 -o GAB_R1.cutadapt.fastq -p GAB_R2.cutadapt.fastq GAB_R1.fastq.gz GAB_R2.fastq.gz
+
+For Spades: spades.py -k 21,51,71,91,111,127 --careful --pe1-1 GAB_R1.cutadapt.fastq --pe1-2 GAB_R2.cutadapt.fastq -o GAB_spades_output
+
+For Quast: quast contigs.fasta -o Quast_contigs
+Following this code WinSCP was used to trasfer the report.html file onto the computer. 
