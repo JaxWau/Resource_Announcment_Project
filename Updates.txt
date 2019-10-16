@@ -1,3 +1,6 @@
+October 2nd: Downloaded my reads from the google drive and prepared for QA/QC. Code is shown below. 
+
+
 October 3rd: Did quality assesment on both scratch drive and personal directory. Also transfered files from Colossus onto desktop to continue foreward. R1 quality assesment was good however R2 was of much less quality. 
 
 Code used: fastqc GAB_R1.fastq.gz and *fastqc GAB_R2.fastq.gz*
