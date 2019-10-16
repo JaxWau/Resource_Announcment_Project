@@ -1,5 +1,9 @@
 October 2nd: Downloaded my reads from the google drive and prepared for QA/QC. Code is shown below. 
 
+gdown.pl  https://drive.google.com/1dJHIeN-7pY9nDAz3Ia8QObJvTjbj-9HY/edit GAB_R1.fastq.gz
+
+gdown.pl https://drive.google.com/1n_rpyjTiZjdKW4ICZDYYpf-osMIqAi71/edit GAB_R2.fastq.gz
+
 
 October 3rd: Did quality assesment on both scratch drive and personal directory. Also transfered files from Colossus onto desktop to continue foreward. R1 quality assesment was good however R2 was of much less quality. 
 
