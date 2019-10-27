@@ -18,3 +18,5 @@ For Spades: spades.py -k 21,51,71,91,111,127 --careful --pe1-1 GAB_R1.cutadapt.f
 
 For Quast: quast contigs.fasta -o Quast_contigs
 Following this code WinSCP was used to trasfer the report.html file onto the computer. 
+
+Following Quast contig generation prokka was used. 
