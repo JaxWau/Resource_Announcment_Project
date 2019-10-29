@@ -20,3 +20,11 @@ For Quast: quast contigs.fasta -o Quast_contigs
 Following this code WinSCP was used to trasfer the report.html file onto the computer. 
 
 Following Quast contig generation prokka was used. 
+
+October 29th
+Prokka code: awk '/^>/{print ">T1_" ++i; next}{print}' < contigs.fasta > contigs_names.fasta
+This line allowed us to run prokka with our contig files by modifying the names to be shorter. 
+Next line: prokka --outdir GAB --prefix GAB contigs_names.fasta
+This line ran annotation on our GAB contigs fasta file. 
+
+Following this many files were generated for analysis. This allowed us to analize the congits and gene data that came from annotation. These are such things as COD and EC numbers. This allowed us to see what proteins and genes are in the organism. From here we could finally begin to generate our resource announcment paper/document. 
