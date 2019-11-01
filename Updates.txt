@@ -7,7 +7,8 @@ gdown.pl https://drive.google.com/1n_rpyjTiZjdKW4ICZDYYpf-osMIqAi71/edit GAB_R2.
 
 October 3rd: Did quality assesment on both scratch drive and personal directory. Also transfered files from Colossus onto desktop to continue foreward. R1 quality assesment was good however R2 was of much less quality. 
 
-Code used: fastqc GAB_R1.fastq.gz and *fastqc GAB_R2.fastq.gz*
+Code used: fastqc GAB_R1.fastq.gz and fastqc GAB_R2.fastq.gz
+Overall reads were decent but some quality control needed to be done to improve results. 
 
 
 October 12th: Used cutadapt to get rid of primers on both R1 and R2. Following this ran spades and quast to make the assembly. R1 was trimmed 26522 times while R2 was trimmed 29816 times. After running spades it was completed with an errror correction and assembly warning. 
@@ -18,6 +19,9 @@ For Spades: spades.py -k 21,51,71,91,111,127 --careful --pe1-1 GAB_R1.cutadapt.f
 
 For Quast: quast contigs.fasta -o Quast_contigs
 Following this code WinSCP was used to trasfer the report.html file onto the computer. 
+After Quast documents were moved over, the .html files were looked at in order to determine if the Spades assembly was of good quality. 
+After looking at the Quast .html it was found to be of good quality due to its N50, overall length and number of contigs and the E value. 
+
 
 Following Quast contig generation prokka was used. 
 
@@ -28,3 +32,4 @@ Next line: prokka --outdir GAB --prefix GAB contigs_names.fasta
 This line ran annotation on our GAB contigs fasta file. 
 
 Following this many files were generated for analysis. This allowed us to analize the congits and gene data that came from annotation. These are such things as COD and EC numbers. This allowed us to see what proteins and genes are in the organism. From here we could finally begin to generate our resource announcment paper/document. 
+The overall number of COGs that were in the assembly were:
