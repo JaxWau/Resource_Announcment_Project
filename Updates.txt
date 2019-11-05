@@ -18,6 +18,7 @@ Code used: cutadapt -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTA
 For Spades: spades.py -k 21,51,71,91,111,127 --careful --pe1-1 GAB_R1.cutadapt.fastq --pe1-2 GAB_R2.cutadapt.fastq -o GAB_spades_output
 
 For Quast: quast contigs.fasta -o Quast_contigs
+
 Following this code WinSCP was used to trasfer the report.html file onto the computer. 
 After Quast documents were moved over, the .html files were looked at in order to determine if the Spades assembly was of good quality. 
 After looking at the Quast .html it was found to be of good quality due to its N50, overall length and number of contigs and the E value. 
@@ -33,3 +34,9 @@ This line ran annotation on our GAB contigs fasta file.
 
 Following this many files were generated for analysis. This allowed us to analize the congits and gene data that came from annotation. These are such things as COD and EC numbers. This allowed us to see what proteins and genes are in the organism. From here we could finally begin to generate our resource announcment paper/document. 
 The overall number of COGs that were in the assembly were: 1618
+In addition following annotation we then were able to see how many genes there were as well as non-coding regions there were. 
+Number of genes: 2107
+Code for gene collection:
+cut -f4 GAB.tsv > genes.txt *this line of code cut column 4 (the one with gene names in it) and put it into a text file)
+sed -i '/^$/d' genes.txt *this line got rid of all empty rows within genes.txt as those without gene names are potential proteins but are not confirmed. 
+wc -l genes.txt *this line of code counted the number of lines in genes.txt so we knew how many actualy genes there were in the counstruct. 
